@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Lucky Life') }}</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
@@ -35,15 +35,24 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                      <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
+                    <ul class="nav navbar-nav navbar-left">            
+<li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    Product <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="product/{type}">3C產品</a></li>
+                                    <li><a href="/product">家電類</a></li>
+                                </ul>
+                            </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -70,8 +79,11 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
+                                     <li><a href="/Account">Account</a></li>
                                 </ul>
                             </li>
+                           <li><a href="{{ url('/shoppingcart') }}">WishList</a></li>  
+                
                         @endif
                     </ul>
                 </div>

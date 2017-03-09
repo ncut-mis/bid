@@ -23,6 +23,17 @@ Route::get('/home', function () {
 Route::get('hello/{name?}', function($name = 'Everybody') {
     return 'Hello, '.$name;
 });
+Route::get('/shoppingcart', function () {
+    return view('shoppingcart.shoppingcart');
+});
+Route::get('/Account', function () {
+    return view('Account.account');
+});
+Route::get('product/{type}', function ($type) {
+    return view('product.product');
+});
+
+
 Route::get('/tasks', 'TaskController@index');
 Route::post('/task', 'TaskController@store');
 Route::delete('/task/{task}', 'TaskController@destroy');

@@ -1,11 +1,9 @@
 @extends('layouts.app')
 
-@section('title')
-    Laravel Shopping Cart
-@endsection
-
+        <!-- 顯示驗證錯誤 -->
+  
 @section('content')
- @include('common.errors')
+  @include('common.errors')
     <div class="row">
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
