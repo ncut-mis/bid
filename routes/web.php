@@ -20,17 +20,30 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home.home');
 });
-Route::get('hello/{name?}', function($name = 'Everybody') {
-    return 'Hello, '.$name;
-});
 Route::get('/shoppingcart', function () {
     return view('shoppingcart.shoppingcart');
 });
 Route::get('/Account', function () {
     return view('Account.account');
 });
-Route::get('product/{type}', function ($type) {
+/*Route::get('product/{type}', function ($type) {
     return view('product.product');
+});
+*/
+Route::get('product/product', function () {
+    return view('product.product');
+});
+Route::get('product/3c', function () {
+    return view('product.3c');
+});
+Route::get('product/electric equipment', function () {
+    return view('product.electric equipment');
+});
+Route::get('notice/system', function () {
+    return view('notice.system');
+});
+Route::get('notice/activity', function () {
+    return view('notice.activity');
 });
 
 
