@@ -14,40 +14,23 @@
 // 認證路由...
 Route::auth();
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/home', function () {
-    return view('home.home');
-});
-Route::get('/shoppingcart', function () {
-    return view('shoppingcart.shoppingcart');
-});
-Route::get('/Account', function () {
-    return view('Account.account');
-});
+Route::get('/','HomeController@Welcome');
+Route::get('/home','HomeController@Home');
+Route::get('/shoppingcart','HomeController@Shoppingcart');
+Route::get('/Account', 'HomeController@Account');
 /*Route::get('product/{type}', function ($type) {
     return view('product.product');
 });
 */
-Route::get('product/product', function () {
-    return view('product.product');
-});
-Route::get('product/3c', function () {
-    return view('product.3c');
-});
-Route::get('product/electric equipment', function () {
-    return view('product.electric equipment');
-});
-Route::get('notice/system', function () {
-    return view('notice.system');
-});
-Route::get('notice/activity', function () {
-    return view('notice.activity');
-});
-
-
+Route::get('product/product','HomeController@Product');
+Route::get('product/3c','HomeController@C');
+Route::get('product/electric equipment','HomeController@Electricequipment');
+Route::get('notice/system','HomeController@System');
+Route::get('notice/activity','HomeController@Activity');
 Route::get('/tasks', 'TaskController@index');
+
+/*   範例
 Route::post('/task', 'TaskController@store');
 Route::delete('/task/{task}', 'TaskController@destroy');
 Route::get('/tracy' ,function (){throw new \Exception('Tracy works!');});
+*/
