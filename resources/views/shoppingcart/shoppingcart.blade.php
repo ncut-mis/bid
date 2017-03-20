@@ -76,47 +76,18 @@
 						<div class="row">
 							<div class="col-md-3 col-md-offset-1">
 								<!-- COLUMN 1 -->
-								<h3 class="sr-only">ABOUT US</h3>
-								<div class="repute-css-logo"><img src="assets/img/logo/luckylogo.png"></div>
-								<p style="font-size: 17px;font-weight: 500;">台灣在地經營，以用心、公平、快速、服務優先，為經營理念。</p>
-								<p style="font-size: 17px;font-weight: 500;">合法納稅，台灣第一奪寶平台</p>
 								<!-- END COLUMN 1 -->
 							</div>
 							<div class="col-md-2">
 								<!-- COLUMN 2 -->
-								<h3 class="footer-heading">新手教學</h3>
-								<div class="row margin-bottom-30px">
-									<div class="col-xs-12">
-										<ul class="list-unstyled footer-nav">
-											<li><a href="teach_tb.php">奪寶教學</a></li>
-											<li><a href="teach_addmoney.php">儲值教學</a></li>
-										</ul>
-									</div>
-								</div>
 								<!-- END COLUMN 2 -->
 							</div>
 							<div class="col-md-1">
-								<img src="assets/img/222.jpg" class="img-responsive" >
-								<!-- END COLUMN 2 -->
 							</div>									
 							<div class="col-md-3">
-								<h3 class="footer-heading">聯絡資訊</h3>
-								<address class="margin-bottom-30px">
-							<ul class="list-unstyled">
-								<li>Email: service@luckytogo.com</li>
-								<li>請善用Line或臉書與小編聯繫，才能快速服務您喔!</li>			
-							</ul>
-						</address>								
-								<ul class="list-inline social-icons">
-									<li>
-										<a href="https://www.facebook.com/allluckytogo/" class="facebook-bg"><i class="fa fa-facebook"></i></a>
-									</li>										
-								</ul>
-							</div>
 						</div>
 						<!-- COPYRIGHT -->
 						<div class="copyright">
-							Copyrigh &copy; 2016-2017 Luckytogo.
 						</div>
 						<!-- END COPYRIGHT -->
 					</div>

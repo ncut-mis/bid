@@ -6,6 +6,7 @@
 
 @section('content')
  @include('common.errors')
+ <body style="background-image: url('img/home-bg.jpg')">
     <div class="row">
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
@@ -88,4 +89,5 @@
             </div>
         </div>
     </div>
+</body>    
 @endsection
