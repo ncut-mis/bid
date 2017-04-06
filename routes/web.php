@@ -23,6 +23,9 @@ Route::get('/Account', 'HomeController@Account');
 });
 */
 Route::get('product/product','HomeController@Product');
+
+Route::get('product/{id}', ['as' => 'product.index' , 'uses' => 'Productcontroller@index']);
+
 Route::get('product/3c','HomeController@C');
 Route::get('product/electric equipment','HomeController@Electricequipment');
 Route::get('notice/system','HomeController@System');

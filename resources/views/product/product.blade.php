@@ -6,7 +6,7 @@
             <div class="thumbnail">
                 <img src="http://ecx.images-amazon.com/images/I/51ZU%2BCvkTyL.jpg" alt="..." class="img-responsive">
                 <div class="caption">
-                    <h3>Product Title</h3>
+                    <h3>{{ $product->name }}</h3>
                     <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores error eum inventore officia quis quos totam! Asperiores deleniti, distinctio illum incidunt nulla officiis quas suscipit vitae? Magni necessitatibus repellendus voluptate!</p>
                     <div class="clearfix">
                         <div class="pull-left price">$12</div>

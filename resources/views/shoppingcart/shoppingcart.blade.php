@@ -29,8 +29,7 @@
 												<th>&nbsp;</th>
 											</tr>
 										</thead>
-										<tbody>
-										<h2>購物車尚無商品</h2>										</tbody>
+										
 									</table>
 									<hr>
 									<div class="shopping-cart-bottom">
