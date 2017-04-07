@@ -18,6 +18,7 @@ Route::get('/','HomeController@Welcome');
 Route::get('/home','HomeController@Home');
 Route::get('/shoppingcart','HomeController@Shoppingcart');
 Route::get('/Account', 'HomeController@Account');
+Route::get('/add', 'HomeController@addproduct');
 /*Route::get('product/{type}', function ($type) {
     return view('product.product');
 });
@@ -31,7 +32,7 @@ Route::get('product/electric equipment','HomeController@Electricequipment');
 Route::get('notice/system','HomeController@System');
 Route::get('notice/activity','HomeController@Activity');
 Route::get('/tasks', 'TaskController@index');
-
+Route::post('/add', 'ProductController@create');
 /*   範例
 Route::post('/task', 'TaskController@store');
 Route::delete('/task/{task}', 'TaskController@destroy');
