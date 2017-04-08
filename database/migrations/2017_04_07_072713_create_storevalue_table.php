@@ -13,7 +13,16 @@ class CreateStorevalueTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('storevalues', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('user_id');
+            $table->dateTime('datetime');
+            $table->integer('amount of money');
+            $table->string('payment method');
+            $table->string('bank name/code');
+            $table->rememberToken();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ class CreateStorevalueTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('storevalues');
     }
 }

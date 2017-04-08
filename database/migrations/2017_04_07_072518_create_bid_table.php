@@ -13,7 +13,15 @@ class CreateBidTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('bids', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('user_id');
+            $table->string('auction_id');
+            $table->dateTime('date');
+            $table->integer('quantity');
+            $table->rememberToken();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ class CreateBidTable extends Migration
      */
     public function down()
     {
-        //
+       Schema::dropIfExists('bids');
     }
 }

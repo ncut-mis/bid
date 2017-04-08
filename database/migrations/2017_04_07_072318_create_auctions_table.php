@@ -13,7 +13,18 @@ class CreateAuctionsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('auctions', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('product_id');
+            $table->dateTime('start date');
+            $table->dateTime('end date');
+            $table->string('betting stytle');
+            $table->integer('maximum');
+            $table->integer('minimum');
+            $table->integer('quantity');
+            $table->rememberToken();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +34,6 @@ class CreateAuctionsTable extends Migration
      */
     public function down()
     {
-        //
+       Schema::dropIfExists('auctions');
     }
 }
