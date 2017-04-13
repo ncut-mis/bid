@@ -19,6 +19,11 @@ Route::get('/home','HomeController@Home');
 Route::get('/shoppingcart','HomeController@Shoppingcart');
 Route::get('/Account', 'HomeController@Account');
 Route::get('/add', 'HomeController@addproduct');
+Route::get('/type', 'HomeController@type');
+Route::get('type/create', 'HomeController@createtype');
+Route::get('type/edit', 'HomeController@createtype');
+Route::get('type/delete', 'HomeController@createtype');
+
 /*Route::get('product/{type}', function ($type) {
     return view('product.product');
 });
@@ -33,8 +38,22 @@ Route::get('notice/system','HomeController@System');
 Route::get('notice/activity','HomeController@Activity');
 Route::get('/tasks', 'TaskController@index');
 Route::post('/add', 'ProductController@create');
+//Route::post('/type', 'TypeController@addtype');
+
 /*   範例
 Route::post('/task', 'TaskController@store');
 Route::delete('/task/{task}', 'TaskController@destroy');
 Route::get('/tracy' ,function (){throw new \Exception('Tracy works!');});
 */
+
+//後台
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('/', ['as' => 'admin.dashboard.index', 'uses' => 'AdminDashboardController@index']);
+
+    Route::get('posts'          , ['as' => 'admin.posts.index' , 'uses' => 'AdminPostsController@index']);
+    Route::get('posts/create'   , ['as' => 'admin.posts.create' , 'uses' => 'AdminPostsController@create']);
+    Route::get('posts/{id}/edit', ['as' => 'admin.posts.edit'   , 'uses' => 'AdminPostsController@edit']);
+    Route::patch('posts/{id}'   , ['as' => 'admin.posts.update' , 'uses' => 'AdminPostsController@update']);
+    Route::post('posts'         , ['as' => 'admin.posts.store'  , 'uses' => 'AdminPostsController@store']);
+    Route::delete('posts/{id}'  , ['as' => 'admin.posts.destroy', 'uses' => 'AdminPostsController@destroy']);
+});
