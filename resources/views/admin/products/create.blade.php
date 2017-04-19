@@ -38,6 +38,10 @@
                 <textarea name="specification" class="form-control" rows="10"></textarea>
             </div>
              <div class="form-group">
+                <label>產品型錄：</label> 
+             <input type="file" class="form-control" name="catalog" placeholder="上傳圖片" value="">
+            </div>
+             <div class="form-group">
                 <label>產品數量：</label>
                 <input name="quantity" class="form-control" placeholder="請輸入產品數量">
             </div>

@@ -28,6 +28,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::patch('products/{id}'   , ['as' => 'admin.products.update' , 'uses' => 'AdminproductsController@update']);
     Route::post('products'         , ['as' => 'admin.products.store'  , 'uses' => 'AdminproductsController@store']);
     Route::delete('products/{id}'  , ['as' => 'admin.products.destroy', 'uses' => 'AdminproductsController@destroy']);
+    Route::post('/user/icon-upload','AdminproductsController@iconUpload');
 });
 
 /*Route::get('product/{type}', function ($type) {

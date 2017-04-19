@@ -35,6 +35,7 @@
                         <th width="70" style="text-align: center">產品名稱</th>
                         <th width="70" style="text-align: center">產品類別</th>
                         <th width="70" style="text-align: center">產品規格</th>
+                         <th width="70" style="text-align: center">產品型錄</th>
                         <th width="70" style="text-align: center">數量</th>
                         <th width="70" style="text-align: center">價格</th>
                         <th width="70" style="text-align: center">成本</th>
@@ -48,6 +49,9 @@
                         <td align="center">{{ $post->name }}</td>
                         <td align="center">{{ $post->category }}</td>
                         <td align="center">{{ $post->specification }}</td>
+                        <td align="center"><img src="/img/{{ $post->catalog }}" width="300px" height="200px"></td>
+                        
+
                         <td align="center">{{ $post->quantity }}</td>
                         <td align="center">{{ $post->price }}</td>
                         <td align="center">{{ $post->cost }}</td>
