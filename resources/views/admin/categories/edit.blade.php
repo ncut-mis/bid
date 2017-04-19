@@ -7,11 +7,11 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            編輯文章 <small>編輯文章內容</small>
+            編輯類別 <small>編輯類別</small>
         </h1>
         <ol class="breadcrumb">
             <li class="active">
-                <i class="fa fa-edit"></i> 文章管理
+                <i class="fa fa-edit"></i> 類別管理
             </li>
         </ol>
     </div>
@@ -22,16 +22,16 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <form action="/admin/posts/{{$post->id}}" method="POST" role="form">
+        <form action="/admin/categories/{{$post->id}}" method="POST" role="form">
             {{ csrf_field() }}
             {{ method_field('PATCH') }}
 
             <div class="form-group">
-                <label>標題：</label>
-                <input name="title" class="form-control" placeholder="請輸入文章標題" value="{{$post->title}}">
+                <label>類別：</label>
+                <input name="name" class="form-control"  value="{{$post->name}}">
             </div>
 
-            <div class="form-group">
+<!--          <div class="form-group">
                 <label>內容：</label>
                 <textarea name="content" class="form-control" rows="10">{{$post->content}}</textarea>
             </div>
@@ -42,7 +42,7 @@
                     <option value="0" {{ $post->is_feature?'':'SELECTED' }}>否</option>
                     <option value="1" {{ $post->is_feature?'SELECTED':'' }}>是</option>
                 </select>
-            </div>
+            </div>  -->
 
             <div class="text-right">
                 <button type="submit" class="btn btn-success">更新</button>
