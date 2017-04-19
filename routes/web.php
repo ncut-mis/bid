@@ -35,12 +35,16 @@ Route::group(['prefix' => 'admin'], function() {
     Route::patch('products/{id}'   , ['as' => 'admin.products.update' , 'uses' => 'AdminproductsController@update']);
     Route::post('products'         , ['as' => 'admin.products.store'  , 'uses' => 'AdminproductsController@store']);
     Route::delete('products/{id}'  , ['as' => 'admin.products.destroy', 'uses' => 'AdminproductsController@destroy']);
+
     Route::get('categories'          , ['as' => 'admin.categories.index' , 'uses' => 'AdminCategoryController@index']);
     Route::get('categories/create'   , ['as' => 'admin.categories.create' , 'uses' => 'AdminCategoryController@create']);
     Route::get('categories/{id}/edit', ['as' => 'admin.categories.edit'   , 'uses' => 'AdminCategoryController@edit']);
     Route::patch('categories/{id}'   , ['as' => 'admin.categories.update' , 'uses' => 'AdminCategoryController@update']);
     Route::post('categories'         , ['as' => 'admin.categories.store'  , 'uses' => 'AdminCategoryController@store']);
     Route::delete('categories/{id}'  , ['as' => 'admin.categories.destroy', 'uses' => 'AdminCategoryController@destroy']);
+
+    Route::post('/user/icon-upload','AdminproductsController@iconUpload');
+
 });
 
 
