@@ -65,7 +65,7 @@ class TaskController extends Controller
             'name' => $request->name,
         ]);
 
-        return redirect('/task');
+        return redirect('/tasks');
     }
 
     /**
