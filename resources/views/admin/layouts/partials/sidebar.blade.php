@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{ route('admin.dashboard.index') }}">管理後台</a>
+        <a class="navbar-brand" href="{{ route('admin.dashboard.index') }}" style="font-family:DFKai-sb;">管理後台</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
@@ -33,16 +33,17 @@
     </ul>
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav side-nav">
+        <ul class="nav navbar-nav side-nav" style="font-family:DFKai-sb;">
             <li class="active">
                 <a href="{{ route('admin.dashboard.index') }}"><i class="fa fa-fw fa-dashboard"></i> 主控台</a>
             </li>
             <li>
-<<<<<<< HEAD
+
                 <a href="{{ route('admin.categories.index') }}"><i class="fa fa-fw fa-edit"></i> 類別管理</a>
-=======
+
                 <a href="{{ route('admin.products.index') }}"><i class="fa fa-fw fa-edit"></i> 產品管理</a>
->>>>>>> origin/master
+                
+
             </li>
         </ul>
     </div>

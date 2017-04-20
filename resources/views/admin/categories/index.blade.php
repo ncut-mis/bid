@@ -28,30 +28,29 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="table-responsive">
-            <table class="table table-bordered table-hover">
+            <table class="table table-bordered table-hover" style="font-size:16px;font-family:DFKai-sb;text-align:center;">
                 <thead>
                     <tr>
-                        <th width="30" style="text-align: center">#</th>
-                        <th>類別</th>
+                        <th width="30" style="vertical-align:middle">類別編號</th>
+                        <th width="30" style="vertical-align:middle">類別名稱</th>
                        <!-- <th width="70" style="text-align: center">精選？</th>-->
-                        <th width="100" style="text-align: center">功能</th>
+                        <th width="50" style="vertical-align:middle">功能</th>
                     </tr>
                 </thead>
                 <tbody>
                 @foreach($categories as $post)
                     <tr>
-                        <td style="text-align: center">{{ $post->id }}</td>
-                        <td>{{ $post->name }}</td>
+                        <td style="vertical-align:middle">C{{ $post->id }}</td>
+                        <td style="vertical-align:middle">{{ $post->name }}</td>
                         <!--<td style="text-align: center">{{ $post->is_feature?'V':'X' }}</td>-->
                         <td>
                             <div>
-                                <a href="{{ route('admin.categories.edit', $post->id) }}" class="btn btn-success">編輯</a>
-                                /
                                 <form action="{{ route('admin.categories.destroy', $post->id) }}" method="POST">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
 
                                     <button class="btn btn-success">刪除</button>
+                                    <a href="{{ route('admin.categories.edit', $post->id) }}" class="btn btn-success">編輯</a>
                                 </form>
                             </div>
                         </td>
