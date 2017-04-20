@@ -61,6 +61,9 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                <!-- 我在這裡的話 我會做 while 迴圈 連結資料庫的每一列
+                                <li><a href="/product/product"> "這裡是顯示資料"   </a></li>
+                                -->
                                     <li><a href="/product/product">全部商品</a></li>
                                     <li><a href="/product/3c">3C/手機/電腦周邊</a></li>
                                     <li><a href="/product/electric equipment">家用電器</a></li>

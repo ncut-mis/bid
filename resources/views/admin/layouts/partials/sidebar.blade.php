@@ -38,7 +38,11 @@
                 <a href="{{ route('admin.dashboard.index') }}"><i class="fa fa-fw fa-dashboard"></i> 主控台</a>
             </li>
             <li>
+<<<<<<< HEAD
+                <a href="{{ route('admin.categories.index') }}"><i class="fa fa-fw fa-edit"></i> 類別管理</a>
+=======
                 <a href="{{ route('admin.products.index') }}"><i class="fa fa-fw fa-edit"></i> 產品管理</a>
+>>>>>>> origin/master
             </li>
         </ul>
     </div>
