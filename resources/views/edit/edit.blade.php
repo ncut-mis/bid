@@ -4,15 +4,15 @@
 @section('content')
 @include('common.errors')
 <?php
-foreach ($product as $product){
+foreach ($type as $type){
 ?>
     <div class="row">
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
                 <div class="caption">
-                    <h3>{{$product->product_name}}</h3>
+                    <h3>{{$type->type_no}}</h3>
                     <div class="clearfix">
-                        <div class="pull-left price">${{$product->price}}</div>
+                        <div class="pull-left price">{{$type->type_name}}</div>
                         <a href="#" class="btn btn-success pull-right" role="button">Add to Cart</a>
                     </div>
                 </div>
