@@ -7,30 +7,13 @@ use DB;
 class HomeController extends Controller
 {
     public function Welcome(){
-        $product = DB::table('products')->get();
-        return view('welcome',['product'=>$product]);
-    }
-    public function type(){
-        $type = DB::table('types')->get();
-        return view('edit.edit',['type'=>$type]);
-    }
-    public function addproduct(){
-        return view('add.addproduct');
-    }
-    public function type(){
-        return view('add.type');
-    }
-    public function createtype(){
-        return view('add.createtype');
+        return view('welcome');
     }
     public function Home(){
         return view('home.home');
     }
     public function Shoppingcart(){
         return view('shoppingcart.shoppingcart');
-    }
-    public function Account(){
-        return view('account.users.index');
     }
     public function Product(){
         return view('product.product');

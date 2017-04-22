@@ -17,8 +17,6 @@ Route::auth();
 Route::get('/','HomeController@Welcome');
 Route::get('/home','HomeController@Home');
 Route::get('/shoppingcart','HomeController@Shoppingcart');
-Route::get('/edit', 'HomeController@type');
-Route::get('/Account', 'HomeController@Account');
 Route::get('product/product','HomeController@Product');
 Route::get('product/3c','HomeController@C');
 Route::get('product/electric equipment','HomeController@Electricequipment');
@@ -33,15 +31,6 @@ Route::group(['prefix' => 'account'], function() {
     Route::patch('users/{id}'   , ['as' => 'account.users.update' , 'uses' => 'AccountusersController@update']);
     Route::delete('users/{id}'  , ['as' => 'account.users.destroy', 'uses' => 'AccountusersController@destroy']);
 });
-
-
-Route::get('/add', 'HomeController@addproduct');
-Route::get('/type', 'HomeController@type');
-Route::get('type/create', 'HomeController@createtype');
-Route::get('type/edit', 'HomeController@createtype');
-Route::get('type/delete', 'HomeController@createtype');
-
-
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/', ['as' => 'admin.dashboard.index', 'uses' => 'AdminDashboardController@index']);
 
@@ -51,10 +40,6 @@ Route::group(['prefix' => 'admin'], function() {
     Route::patch('products/{id}'   , ['as' => 'admin.products.update' , 'uses' => 'AdminproductsController@update']);
     Route::post('products'         , ['as' => 'admin.products.store'  , 'uses' => 'AdminproductsController@store']);
     Route::delete('products/{id}'  , ['as' => 'admin.products.destroy', 'uses' => 'AdminproductsController@destroy']);
-<<<<<<< HEAD
-});
-=======
-
     Route::get('categories'          , ['as' => 'admin.categories.index' , 'uses' => 'AdminCategoryController@index']);
     Route::get('categories/create'   , ['as' => 'admin.categories.create' , 'uses' => 'AdminCategoryController@create']);
     Route::get('categories/{id}/edit', ['as' => 'admin.categories.edit'   , 'uses' => 'AdminCategoryController@edit']);
@@ -65,35 +50,6 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('/user/icon-upload','AdminproductsController@iconUpload');
 
 });
-
-
-/*Route::get('product/{type}', function ($type) {
-    return view('product.product');
-});
-*/
-/*
-Route::get('product/product','HomeController@Product');
-
-Route::get('product/{id}', ['as' => 'product.index' , 'uses' => 'Productcontroller@index']);
-
-Route::get('product/3c','HomeController@C');
-Route::get('product/electric equipment','HomeController@Electricequipment');
-Route::get('notice/system','HomeController@System');
-Route::get('notice/activity','HomeController@Activity');
-Route::get('/tasks', 'TaskController@index');
-Route::post('/add', 'ProductController@create');
-<<<<<<< HEAD
-//Route::post('/type', 'TypeController@addtype');
-
-/*   範例
-=======
-//   範例
->>>>>>> origin/master
-Route::post('/task', 'TaskController@store');
-Route::delete('/task/{task}', 'TaskController@destroy');
-Route::get('/tracy' ,function (){throw new \Exception('Tracy works!');});
-*/
-
 //後台
 /*Route::group(['prefix' => 'admin'], function() {
     Route::get('/', ['as' => 'admin.dashboard.index', 'uses' => 'AdminDashboardController@index']);
