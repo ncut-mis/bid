@@ -14,6 +14,9 @@ class HomeController extends Controller
         $type = DB::table('types')->get();
         return view('edit.edit',['type'=>$type]);
     }
+    public function addproduct(){
+        return view('add.addproduct');
+    } 
     public function Home(){
         return view('home.home');
     }
