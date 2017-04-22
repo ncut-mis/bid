@@ -6,12 +6,12 @@
 <!-- Page Heading -->
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">
+        <h1 class="page-header" style="font-family:DFKai-sb;">
             產品管理 <small>所有產品列表</small>
         </h1>
         <ol class="breadcrumb">
             <li class="active">
-                <i class="fa fa-edit"></i> 產品管理
+                <i class="fa fa-edit" style="font-family:DFKai-sb;"> 產品管理</i>
             </li>
         </ol>
     </div>
@@ -20,7 +20,7 @@
 
 <div class="row" style="margin-bottom: 20px; text-align: right">
     <div class="col-lg-12">
-        <a href="{{ route('admin.products.create') }}" class="btn btn-success">新增產品</a>
+        <a href="{{ route('admin.products.create') }}" class="btn btn-success" style="font-family:DFKai-sb;">新增產品</a>
     </div>
 </div>
 <!-- /.row -->
@@ -28,13 +28,14 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="table-responsive">
-            <table class="table table-bordered table-hover">
+            <table class="table table-bordered table-hover" style="font-size:16px;font-family:DFKai-sb;text-align:center;"  list-style-type="decimal">
                 <thead>
                     <tr>
                         <th width="70" style="text-align: center">產品編號</th>
                         <th width="70" style="text-align: center">產品名稱</th>
                         <th width="70" style="text-align: center">產品類別</th>
                         <th width="70" style="text-align: center">產品規格</th>
+                        <th width="70" style="text-align: center">產品型錄</th>
                         <th width="70" style="text-align: center">數量</th>
                         <th width="70" style="text-align: center">價格</th>
                         <th width="70" style="text-align: center">成本</th>
@@ -44,14 +45,17 @@
                 <tbody>
                 @foreach($products as $post)
                     <tr>
-                        <td align="center">{{ $post->id }}</td>
-                        <td align="center">{{ $post->name }}</td>
-                        <td align="center">{{ $post->category }}</td>
-                        <td align="center">{{ $post->specification }}</td>
-                        <td align="center">{{ $post->quantity }}</td>
-                        <td align="center">{{ $post->price }}</td>
-                        <td align="center">{{ $post->cost }}</td>
-                        <td>
+                        <td style="vertical-align:middle">P{{ $post->id }}</td>
+                        <td style="vertical-align:middle">{{ $post->name }}</td>
+                        <td style="vertical-align:middle">{{ $post->category }}</td>
+                        <td style="vertical-align:middle">{{ $post->specification }}</td>
+                        <td style="vertical-align:middle"><img src="/img/{{ $post->catalog }}" width="100px" height="100px"></td>
+                        
+
+                        <td style="vertical-align:middle">{{ $post->quantity }}</td>
+                        <td style="vertical-align:middle">{{ $post->price }}</td>
+                        <td style="vertical-align:middle">{{ $post->cost }}</td>
+                        <td style="vertical-align:middle">
                             <div>
                                 
                                 <form action="{{ route('admin.products.destroy', $post->id) }}" method="POST" align="center">

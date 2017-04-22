@@ -38,6 +38,10 @@
                 <label>產品規格：</label>
                 <textarea name="specification" class="form-control" rows="10">{{ $products->specification }}</textarea>
             </div>
+            <div class="form-group">
+                <label>產品型錄：</label>
+                <input type="file" class="form-control" name="catalog" placeholder="上傳圖片" value="{{ $products->catalog }}">
+            </div>
              <div class="form-group">
                 <label>產品數量：</label>
                 <input name="quantity" class="form-control" value="{{ $products->quantity }}">

@@ -16,7 +16,13 @@ class HomeController extends Controller
     }
     public function addproduct(){
         return view('add.addproduct');
-    } 
+    }
+    public function type(){
+        return view('add.type');
+    }
+    public function createtype(){
+        return view('add.createtype');
+    }
     public function Home(){
         return view('home.home');
     }
