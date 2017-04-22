@@ -53,8 +53,8 @@
                         
 
                         <td style="vertical-align:middle">{{ $post->quantity }}</td>
-                        <td style="vertical-align:middle">{{ $post->price }}</td>
-                        <td style="vertical-align:middle">{{ $post->cost }}</td>
+                        <td style="vertical-align:middle">${{ $post->price }}</td>
+                        <td style="vertical-align:middle">${{ $post->cost }}</td>
                         <td style="vertical-align:middle">
                             <div>
                                 

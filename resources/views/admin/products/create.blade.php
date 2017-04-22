@@ -29,9 +29,15 @@
                 <label>產品名稱：</label>
                 <input name="name" class="form-control" placeholder="請輸入產品名稱">
             </div>
-             <div class="form-group">
+            <div class="form-group">
                 <label>產品類別：</label>
-                <input name="category" class="form-control" placeholder="請輸入產品類別">
+                
+                      <select  class="form-control" name="category">
+                       @foreach($categories as $post)
+　                    <option value="{{ $post->name }}">{{ $post->name }}</option>
+                       @endforeach
+                      </select>
+                
             </div>
              <div class="form-group">
                 <label>產品規格：</label>
@@ -39,7 +45,7 @@
             </div>
              <div class="form-group">
                 <label>產品型錄：</label> 
-             <input type="file" class="form-control" name="catalog" placeholder="上傳圖片" value="">
+             <input type="file" class="form-control" name="catalog" placeholder="上傳圖片">
             </div>
              <div class="form-group">
                 <label>產品數量：</label>

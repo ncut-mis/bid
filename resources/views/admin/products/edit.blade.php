@@ -40,7 +40,7 @@
             </div>
             <div class="form-group">
                 <label>產品型錄：</label>
-                <input type="file" class="form-control" name="catalog" placeholder="上傳圖片" value="{{ $products->catalog }}">
+                <input type="file" class="form-control" name="catalog" value="{{ $products->catalog }}">
             </div>
              <div class="form-group">
                 <label>產品數量：</label>

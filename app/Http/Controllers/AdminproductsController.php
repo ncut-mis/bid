@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests\productRequest;
+use App\Http\Requests\CategoryRequest;
 use App\product;
+use App\category;
 
 class AdminproductsController extends Controller
 {
@@ -18,7 +20,8 @@ class AdminproductsController extends Controller
 
     public function create()
     {
-        return view('admin.products.create');
+         $categories = category::all(['name']);
+        return view('admin.products.create', compact('categories',$categories));
     }
 
     public function edit($id)
