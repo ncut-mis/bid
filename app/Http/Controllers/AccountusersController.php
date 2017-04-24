@@ -9,7 +9,7 @@ use App\User;
 
 class AccountusersController extends Controller
 {
-    public function index()
+     public function index()
     {
         $post=User::orderBy('created_at', 'DESC')->get();
         $data=['users'=>$post];

@@ -1,6 +1,6 @@
 @extends('account.layouts.master')
 
-@section('title', '編輯文章')
+@section('title', '會員資料修改')
 
 @section('content')
 <!-- Page Heading -->
@@ -44,6 +44,18 @@
             <div class="form-group">
                 <label>地址：</label>
                 <input name="address" class="form-control" style="width:200px" value="{{Auth::user()->address}}">
+            </div>
+            <div class="form-group">
+                <label>信用卡號：</label>
+                <input name="card_number" class="form-control" style="width:200px" value="{{Auth::user()->card_number}}">
+            </div>
+            <div class="form-group">
+                <label>信用類別：</label>
+                <input name="card_category" class="form-control" style="width:200px" value="{{Auth::user()->card_category}}">
+            </div>
+            <div class="form-group">
+                <label>代幣數量：</label>
+                <label >{{Auth::user()->tokens_quantity}}</label>
             </div>
             <div class="text-left">
                 <button type="submit" class="btn btn-success" >更新</button>   
