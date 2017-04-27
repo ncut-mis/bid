@@ -103,8 +103,6 @@
                                         </form>
                                     </li>
                                      <li><a href="{{ route('account.dashboard.index')}}">Account</a></li>
-                                     <li><a href="/edit">edit</a></li>
-                                     <li><a href="/user1">member</a></li>
                                 </ul>
                             </li>
                            <li><a href="{{ url('/shoppingcart') }}">WishList</a></li>  

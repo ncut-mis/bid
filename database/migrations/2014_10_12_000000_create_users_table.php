@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('address');
             $table->integer('tokens_quantity');
             $table->string('phone_number');
-            $table->integer('card_number');
+            $table->string('card_number');
             $table->string('card_category');
             $table->rememberToken();
             $table->timestamps();

@@ -23,14 +23,21 @@ Route::get('product/electric equipment','HomeController@Electricequipment');
 Route::get('notice/system','HomeController@System');
 Route::get('notice/activity','HomeController@Activity');
 
+
 Route::group(['prefix' => 'account'], function() {
     Route::get('/', ['as' => 'account.dashboard.index', 'uses' => 'AccountDashboardController@index']);
-
     Route::get('users'          , ['as' => 'account.users.index' , 'uses' => 'AccountusersController@index']);
     Route::get('users/{id}/edit', ['as' => 'account.users.edit'   , 'uses' => 'AccountusersController@edit']);
     Route::patch('users/{id}'   , ['as' => 'account.users.update' , 'uses' => 'AccountusersController@update']);
-    Route::delete('users/{id}'  , ['as' => 'account.users.destroy', 'uses' => 'AccountusersController@destroy']);
 });
+
+Route::group(['prefix' => 'storevalue'], function() {
+    Route::get('/' , ['as' => 'storevalue.dashboard.index', 'uses' => 'StoreValueDashboardController@index']);
+    
+    Route::get('storevalue'            ,['as' => 'storevalue.index'    ,'uses' => 'StoreValueController@index']);
+    Route::get('storevalue/create'      ,['as' => 'storevalue.create'   ,'uses' => 'StoreValueController@create']);
+});
+
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/', ['as' => 'admin.dashboard.index', 'uses' => 'AdminDashboardController@index']);
 
@@ -48,5 +55,4 @@ Route::group(['prefix' => 'admin'], function() {
     Route::delete('categories/{id}'  , ['as' => 'admin.categories.destroy', 'uses' => 'AdminCategoryController@destroy']);
 
     Route::post('/user/icon-upload','AdminproductsController@iconUpload');
-
 });
