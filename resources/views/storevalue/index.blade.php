@@ -21,15 +21,17 @@
                     <tr>
                         <th width="70" style="text-align: center">儲值日期</th>
                         <th width="70" style="text-align: center">儲值金額</th>
+                        <th width="70" style="text-align: center">銀行名稱/代碼</th>
                         <th width="70" style="text-align: center">儲值方式</th>
                     </tr>
                 </thead>
                 <tbody>
                 @foreach($storevalues as $post)
                     <tr>
-                        <td style="vertical-align:middle">P{{ $post->datetime}}</td>
-                        <td style="vertical-align:middle">{{ $post->amount of money}}</td>
-                        <td style="vertical-align:middle">{{ $post->payment method}}</td>
+                        <td style="vertical-align:middle">{{ $post->datetime}}</td>
+                        <td style="vertical-align:middle">{{ $post->amount_of_money}}</td>
+                        <td style="vertical-align:middle">{{ $post->bank_name_code}}</td>
+                        <td style="vertical-align:middle">{{ $post->payment_method}}</td>
                     </tr>
                 @endforeach
                 </tbody>

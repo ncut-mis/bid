@@ -31,10 +31,10 @@ Route::group(['prefix' => 'account'], function() {
     Route::patch('users/{id}'   , ['as' => 'account.users.update' , 'uses' => 'AccountusersController@update']);
 });
 
-Route::group(['prefix' => 'storevalue'], function() {
+Route::group(['prefix' => 'store'], function() {
     Route::get('/' , ['as' => 'storevalue.dashboard.index', 'uses' => 'StoreValueDashboardController@index']);
     
-    Route::get('storevalue'            ,['as' => 'storevalue.index'    ,'uses' => 'StoreValueController@index']);
+    Route::get('storevalue'             ,['as' => 'storevalue.index'    ,'uses' => 'StoreValueController@index']);
     Route::get('storevalue/create'      ,['as' => 'storevalue.create'   ,'uses' => 'StoreValueController@create']);
 });
 

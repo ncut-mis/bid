@@ -26,13 +26,13 @@
             <li class="active">
                 <a href="{{ route('storevalue.dashboard.index')}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }}
-                                </a>
+                </a>
             </li>
             <li>
-                <a href="{{ route('storevalue.create') }}"><i class="fa fa-fw fa-edit"></i>儲值</a>
+                <a href="{{ route('storevalue.create') }}"><i class="fa fa-fw fa-create"></i>儲值</a>
             </li>
             <li>
-                <a href="{{ route('storevalue.index') }}"><i class="fa fa-fw fa-edit"></i>儲值紀錄</a>
+                <a href="{{ route('storevalue.index') }}"><i class="fa fa-fw fa-view"></i>儲值紀錄</a>
             </li>
         </ul>
     </div>

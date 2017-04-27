@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\StoreValue;
-use App\User;
+//use App\User;
 use Illuminate\Http\Request;
+//use App\Http\Requests\storevalueRequest;
+
 
 class StoreValueController extends Controller
 {
@@ -29,7 +31,7 @@ class StoreValueController extends Controller
     public function create()
     {
         //
-        $StoreValue = storevalue::all(['user_id']);
+        $StoreValue = StoreValue::all(['user_id']);
         return view('storevalue.create', compact('storevalues',$StoreValue));
     }
 }
