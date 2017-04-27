@@ -47,6 +47,13 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('categories'         , ['as' => 'admin.categories.store'  , 'uses' => 'AdminCategoryController@store']);
     Route::delete('categories/{id}'  , ['as' => 'admin.categories.destroy', 'uses' => 'AdminCategoryController@destroy']);
 
-    Route::post('/user/icon-upload','AdminproductsController@iconUpload');
+    Route::get('auctions'          , ['as' => 'admin.auctions.index' , 'uses' => 'AdminauctionsController@index']);
+    Route::get('auctions/{id}/create'   , ['as' => 'admin.auctions.create' , 'uses' => 'AdminauctionsController@create']);
+    Route::patch('auctions/{id}/create'   , ['as' => 'admin.auctions.create' , 'uses' => 'AdminauctionsController@create']);
+    Route::get('auctions/{id}/edit', ['as' => 'admin.auctions.edit'   , 'uses' => 'AdminauctionsController@edit']);
+    Route::patch('auctions/{id}'   , ['as' => 'admin.auctions.update' , 'uses' => 'AdminauctionsController@update']);
+    Route::post('auctions/{id}', ['as' => 'admin.auctions.store'  , 'uses' => 'AdminauctionsController@store']);
+    Route::patch('auctions/{id}', ['as' => 'admin.auctions.store'  , 'uses' => 'AdminauctionsController@store']);
+    Route::delete('auctions/{id}'  , ['as' => 'admin.auctions.destroy', 'uses' => 'AdminauctionsController@destroy']);
 
 });
