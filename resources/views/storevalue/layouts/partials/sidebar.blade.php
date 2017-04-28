@@ -29,10 +29,10 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('storevalue.create') }}"><i class="fa fa-fw fa-create"></i>儲值</a>
+                <a href="{{ route('storevalue.create', Auth::user()->id) }}"><i class="fa fa-fw fa-create"></i>儲值</a>
             </li>
             <li>
-                <a href="{{ route('storevalue.index') }}"><i class="fa fa-fw fa-view"></i>儲值紀錄</a>
+                <a href="{{ route('storevalue.index',Auth::user()->id) }}"><i class="fa fa-fw fa-view"></i>儲值紀錄</a>
             </li>
         </ul>
     </div>

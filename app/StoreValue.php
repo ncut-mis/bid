@@ -11,8 +11,8 @@ class StoreValue extends Model
     protected $fillable = [
         'user_id',
         'datetime',
-        'amount of money',
-        'payment method',
-        'bank name/code',
+        'amount_of_money',
+        'payment_method',
+        'bank_name_code',
     ];
 }

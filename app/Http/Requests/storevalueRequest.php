@@ -24,9 +24,9 @@ class storevalueRequest extends FormRequest
     public function rules()
     {
         return [
-            'bank name/code'=>'required',
-            'amount of money'=>'required',
-            'payment method'=>'required',            
+            'bank_name_code'=>'required',
+            'amount_of_money'=>'required',
+            'payment_method'=>'required',            
         ];
     }
 }

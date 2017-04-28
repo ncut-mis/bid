@@ -34,8 +34,11 @@ Route::group(['prefix' => 'account'], function() {
 Route::group(['prefix' => 'store'], function() {
     Route::get('/' , ['as' => 'storevalue.dashboard.index', 'uses' => 'StoreValueDashboardController@index']);
     
-    Route::get('storevalue'             ,['as' => 'storevalue.index'    ,'uses' => 'StoreValueController@index']);
-    Route::get('storevalue/create'      ,['as' => 'storevalue.create'   ,'uses' => 'StoreValueController@create']);
+    Route::get('storevalue/{id}'             ,['as' => 'storevalue.index'    ,'uses' => 'StoreValueController@index']);
+    Route::get('storevalue/{id}/create'      ,['as' => 'storevalue.create'   ,'uses' => 'StoreValueController@create']);
+     Route::patch('storevalue/{id}/create'   , ['as' => 'storevalue.create' , 'uses' => 'StoreValueController@create']);
+    Route::post('storevalue/{id}'         , ['as' => 'storevalue.store'  , 'uses' => 'StoreValueController@store']);
+    Route::patch('storevalue/{id}', ['as' => 'storevalue.store'  , 'uses' => 'StoreValueController@store']);
 });
 
 Route::group(['prefix' => 'admin'], function() {

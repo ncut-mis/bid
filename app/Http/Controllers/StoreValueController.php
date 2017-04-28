@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\StoreValue;
-//use App\User;
+use App\User;
 use Illuminate\Http\Request;
-//use App\Http\Requests\storevalueRequest;
+use App\Http\Requests\storevalueRequest;
 
 
 class StoreValueController extends Controller
@@ -15,10 +15,10 @@ class StoreValueController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
         //
-        $post=StoreValue::orderBy('created_at', 'DESC')->get();
+        $post=StoreValue::where('user_id', '=', $id)->orderBy('created_at', 'DESC')->get();
         $data=['storevalues'=>$post];
         return view('storevalue.index', $data);
     }
@@ -28,10 +28,17 @@ class StoreValueController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
-        $StoreValue = StoreValue::all(['user_id']);
-        return view('storevalue.create', compact('storevalues',$StoreValue));
+         $users = User::find($id);
+         $data = ['users' => $users];
+        return view('storevalue.create',$data);
+        //return view('storevalue.create');
+    }
+    public function store(storevalueRequest $request,$id)
+    {
+        StoreValue::create($request->all());
+        $user_id=User::find($id);
+        return redirect()->route('storevalue.index',$user_id);
     }
 }

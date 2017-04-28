@@ -13,6 +13,6 @@ class DatabaseSeeder extends Seeder
     {
        $this‐>call(AdminproductSeeder::class);
        $this‐>call(UserSeeder::class);
-       $this‐>call(StoreValueSeeder::class);
+       $this‐>call(storeSeeder::class);
     }
 }
