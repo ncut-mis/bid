@@ -29,13 +29,13 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                    <img class="slide-image" src="https://www.myrateplan.com/sites/myrateplan.com/files/styles/blog_detail_12x3/public/blog/iphone6.png?itok=lIWpp16n" alt="">
                                 </div>
                                 <div class="item active">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                    <img class="slide-image" src="http://fourtitude.com/wp-content/uploads/2012/05hamann_gallardo_2.jpg" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                    <img class="slide-image" src="http://www.u-mall.com.tw/xml/content/category_front/store_31138/pic_31182-1-201742118234.png" alt="">
                                 </div>
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
