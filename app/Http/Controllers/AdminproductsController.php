@@ -22,7 +22,7 @@ class AdminproductsController extends Controller
 
     public function create()
     {
-         $categories = category::all(['name']);
+        $categories = category::all(['name']);
         return view('admin.products.create', compact('categories',$categories));
     }
 

@@ -16,12 +16,12 @@ class CreateStorevalueTable extends Migration
         Schema::create('storevalues', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_id');
-            $table->dateTime('datetime');
-            $table->integer('amount of money');
-            $table->string('payment method');
-            $table->string('bank name/code');
+            $table->timestampTz('datetime');
+            $table->integer('amount_of_money');
+            $table->string('payment_method');
+            $table->string('bank_name_code');
             $table->rememberToken();
-            $table->timestamps();
+            $table->timestampsTz();
         });
     }
 

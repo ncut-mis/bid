@@ -23,14 +23,24 @@ Route::get('product/electric equipment','HomeController@Electricequipment');
 Route::get('notice/system','HomeController@System');
 Route::get('notice/activity','HomeController@Activity');
 
+
 Route::group(['prefix' => 'account'], function() {
     Route::get('/', ['as' => 'account.dashboard.index', 'uses' => 'AccountDashboardController@index']);
-
     Route::get('users'          , ['as' => 'account.users.index' , 'uses' => 'AccountusersController@index']);
     Route::get('users/{id}/edit', ['as' => 'account.users.edit'   , 'uses' => 'AccountusersController@edit']);
     Route::patch('users/{id}'   , ['as' => 'account.users.update' , 'uses' => 'AccountusersController@update']);
-    Route::delete('users/{id}'  , ['as' => 'account.users.destroy', 'uses' => 'AccountusersController@destroy']);
 });
+
+Route::group(['prefix' => 'store'], function() {
+    Route::get('/' , ['as' => 'storevalue.dashboard.index', 'uses' => 'StoreValueDashboardController@index']);
+    
+    Route::get('storevalue/{id}'             ,['as' => 'storevalue.index'    ,'uses' => 'StoreValueController@index']);
+    Route::get('storevalue/{id}/create'      ,['as' => 'storevalue.create'   ,'uses' => 'StoreValueController@create']);
+     Route::patch('storevalue/{id}/create'   , ['as' => 'storevalue.create' , 'uses' => 'StoreValueController@create']);
+    Route::post('storevalue/{id}'         , ['as' => 'storevalue.store'  , 'uses' => 'StoreValueController@store']);
+    Route::patch('storevalue/{id}', ['as' => 'storevalue.store'  , 'uses' => 'StoreValueController@store']);
+});
+
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/', ['as' => 'admin.dashboard.index', 'uses' => 'AdminDashboardController@index']);
 
@@ -47,6 +57,9 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('categories'         , ['as' => 'admin.categories.store'  , 'uses' => 'AdminCategoryController@store']);
     Route::delete('categories/{id}'  , ['as' => 'admin.categories.destroy', 'uses' => 'AdminCategoryController@destroy']);
 
+
+    Route::post('/user/icon-upload','AdminproductsController@iconUpload');
+
     Route::get('auctions'          , ['as' => 'admin.auctions.index' , 'uses' => 'AdminauctionsController@index']);
     Route::get('auctions/{id}/create'   , ['as' => 'admin.auctions.create' , 'uses' => 'AdminauctionsController@create']);
     Route::patch('auctions/{id}/create'   , ['as' => 'admin.auctions.create' , 'uses' => 'AdminauctionsController@create']);
@@ -55,5 +68,4 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('auctions/{id}', ['as' => 'admin.auctions.store'  , 'uses' => 'AdminauctionsController@store']);
     Route::patch('auctions/{id}', ['as' => 'admin.auctions.store'  , 'uses' => 'AdminauctionsController@store']);
     Route::delete('auctions/{id}'  , ['as' => 'admin.auctions.destroy', 'uses' => 'AdminauctionsController@destroy']);
-
 });

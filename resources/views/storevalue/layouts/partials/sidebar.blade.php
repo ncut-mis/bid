@@ -24,16 +24,16 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
             <li class="active">
-                <a href="{{ route('account.dashboard.index')}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <a href="{{ route('storevalue.dashboard.index')}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }}
-                                </a>
+                </a>
             </li>
             <li>
-                <a href="{{ route('account.users.index') }}"><i class="fa fa-fw fa-edit"></i>會員資料</a>
-            
-        <li>
-        
-        </li>
+                <a href="{{ route('storevalue.create', Auth::user()->id) }}"><i class="fa fa-fw fa-create"></i>儲值</a>
+            </li>
+            <li>
+                <a href="{{ route('storevalue.index',Auth::user()->id) }}"><i class="fa fa-fw fa-view"></i>儲值紀錄</a>
+            </li>
         </ul>
     </div>
     <!-- /.navbar-collapse -->
