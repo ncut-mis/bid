@@ -24,10 +24,6 @@
                 <input type="hidden" name="user_id" class="form-control" value="{{$users->id}}" readonly="readonly">
             </div>
             <div class="form-group">
-                <label>儲值日期</label>
-                <input type="date" name="datetime" class="form-control">
-            </div>
-            <div class="form-group">
                 <label>銀行名稱/代碼：</label>
                 <input name="bank_name_code" class="form-control">
             </div>

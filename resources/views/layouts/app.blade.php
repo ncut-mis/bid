@@ -102,7 +102,8 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                     <li><a href="{{ route('account.dashboard.index')}}">Account</a></li>
+                                     <li><a href="{{ route('account.dashboard.index')}}">會員基本資料</a></li>
+                                     <li><a href="{{ route('storevalue.dashboard.index')}}">儲值</a></li>
                                 </ul>
                             </li>
                            <li><a href="{{ url('/shoppingcart') }}">WishList</a></li>  

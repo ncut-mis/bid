@@ -30,6 +30,10 @@
                 <input name="email" class="form-control" style="width:200px" value="{{Auth::user()->email}}">
             </div>
             <div class="form-group">
+                <label>密碼：</label>
+                <input type="password" name="password" class="form-control" style="width:200px" value="{{Auth::user()->password}}">
+            </div>
+            <div class="form-group">
                 <label>性別：</label>
                 <input name="gender" class="form-control" style="width:200px" value="{{Auth::user()->gender}}">
             </div>
