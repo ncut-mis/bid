@@ -1,17 +1,17 @@
 @extends('admin.layouts.master')
 
-@section('title', '新增文章')
+@section('title', '新增商品')
 
 @section('content')
 <!-- Page Heading -->
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            新增產品 <small>請輸入產品內容</small>
+            新增商品 <small>請輸入商品內容</small>
         </h1>
         <ol class="breadcrumb">
             <li class="active">
-                <i class="fa fa-edit"></i> 產品管理
+                <i class="fa fa-edit"></i> 商品管理
             </li>
         </ol>
     </div>
@@ -26,11 +26,11 @@
             {{ csrf_field() }}
 
             <div class="form-group">
-                <label>產品名稱：</label>
-                <input name="name" class="form-control" placeholder="請輸入產品名稱">
+                <label>商品名稱：</label>
+                <input name="name" class="form-control" placeholder="請輸入商品名稱">
             </div>
             <div class="form-group">
-                <label>產品類別：</label>
+                <label>商品類別：</label>
                 
                       <select  class="form-control" name="category">
                        @foreach($categories as $post)
@@ -40,16 +40,16 @@
                 
             </div>
              <div class="form-group">
-                <label>產品規格：</label>
+                <label>商品規格：</label>
                 <textarea name="specification" class="form-control" rows="10"></textarea>
             </div>
              <div class="form-group">
-                <label>產品型錄：</label> 
+                <label>商品型錄：</label> 
              <input type="file" class="form-control" name="catalog" placeholder="上傳圖片">
             </div>
              <div class="form-group">
-                <label>產品數量：</label>
-                <input name="quantity" class="form-control" placeholder="請輸入產品數量">
+                <label>商品數量：</label>
+                <input name="quantity" class="form-control" placeholder="請輸入商品數量">
             </div>
              <div class="form-group">
                 <label>價格：</label>

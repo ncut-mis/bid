@@ -6,14 +6,16 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests\productRequest;
 use App\Http\Requests\CategoryRequest;
+use App\Http\Requests\auctionRequest;
 use App\product;
 use App\category;
+use App\Auctions;
 
 class AdminproductsController extends Controller
 {
    public function index()
     {
-        $post=product::orderBy('created_at', 'DESC')->get();
+        $post=product::orderBy('id', 'ASC')->get();
         $data=['products'=>$post];
         return view('admin.products.index', $data);
     }

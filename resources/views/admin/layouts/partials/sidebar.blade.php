@@ -41,8 +41,9 @@
 
                 <a href="{{ route('admin.categories.index') }}"><i class="fa fa-fw fa-edit"></i> 類別管理</a>
 
-                <a href="{{ route('admin.products.index') }}"><i class="fa fa-fw fa-edit"></i> 產品管理</a>
+                <a href="{{ route('admin.products.index') }}"><i class="fa fa-fw fa-edit"></i> 商品管理</a>
                 
+                <a href="{{ route('admin.auctions.index') }}"><i class="fa fa-fw fa-edit"></i> 拍賣品管理</a>
 
             </li>
         </ul>

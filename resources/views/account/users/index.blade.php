@@ -38,7 +38,7 @@
                 <label >{{Auth::user()->address}}</label>
             </div>
             <div class="form-group">
-                <label>信用類別：</label>
+                <label>信用卡類別：</label>
                 <label >{{Auth::user()->card_category}}</label>
             </div>
             <div class="form-group">
