@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests\useraccountRequest;
 use App\User;
-
 class AccountusersController extends Controller
 {
      public function index()
