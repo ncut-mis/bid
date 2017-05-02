@@ -28,10 +28,5 @@ class AccountusersController extends Controller
         $post->update($request->all());
         return redirect()->route('account.users.index');
     }
-    public function destroy($id)
-    {
-        Post::destroy($id);
-
-        return redirect()->route('account.users.index');
-    }
+   
 }

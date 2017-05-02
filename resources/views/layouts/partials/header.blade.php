@@ -1,51 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Lucky Life') }}</title>
-
-    <!-- Styles -->
-    <!--<link href="/css/app.css" rel="stylesheet">-->
-    <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="{{ asset('css/shop-homepage.css') }}" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="{{ asset('css/plugins/morris.css') }}" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-
-    <!--<link href="css/shop-homepage.css" rel="stylesheet">-->
-    <!-- Scripts -->
-    <script>
-        window.Laravel = {!! json_encode([
-            'csrfToken' => csrf_token(),
-        ]) !!};
-    </script>
-</head>
-<body>
-
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
 
                     <!-- Branding Image -->
                       <a class="navbar-brand" href="{{ url('/') }}">
@@ -115,8 +77,8 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                     <li><a href="{{ route('account.dashboard.index')}}">會員基本資料</a></li>
-                                     <li><a href="{{ route('storevalue.dashboard.index')}}">儲值</a></li>
+                                     <li><a href="{{ route('account.dashboard.index')}}">會員中心</a></li>
+                                     <li><a href="{{ route('storevalue.dashboard.index')}}">儲值</a></li>                                     
                                 </ul>
                             </li>
                            <li><a href="{{ url('/shoppingcart') }}">WishList</a></li>  
