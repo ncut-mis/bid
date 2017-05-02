@@ -7,11 +7,11 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            新增商品 <small>請輸入商品內容</small>
+            新增拍賣品 <small>請輸入拍賣品內容</small>
         </h1>
         <ol class="breadcrumb">
             <li class="active">
-                <i class="fa fa-edit"></i> 商品管理
+                <i class="fa fa-edit"></i> 拍賣品管理
             </li>
         </ol>
     </div>
