@@ -23,6 +23,8 @@ Route::get('product/electric equipment','HomeController@Electricequipment');
 Route::get('notice/system','HomeController@System');
 Route::get('notice/activity','HomeController@Activity');
 
+Route::get('excel/export','ExcelController@export');
+Route::get('excel/import','ExcelController@import');
 
 Route::group(['prefix' => 'account'], function() {
     Route::get('/', ['as' => 'account.dashboard.index', 'uses' => 'AccountDashboardController@index']);
