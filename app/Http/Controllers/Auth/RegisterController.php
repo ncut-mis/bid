@@ -7,6 +7,16 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+use App\Http\Requests;
+use App\post as PostEloquent;
+use App\PostType as PostTypeEloquent;
+
+use \Carbon\Carbon as Carbon;
+
+use Auth;
+use View;
+use Redirect;
+
 class RegisterController extends Controller
 {
     /*
@@ -51,7 +61,10 @@ class RegisterController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
-            'gender' => 'max:255'
+            'gender' => 'max:255',
+            'birthday'=>'required',
+            'phone_number'=>'required',
+            'address'=>'required',
         ]);
     }
 
@@ -68,6 +81,9 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'gender' => $data['gender'],
+            'birthday'=>$data['birthday'],
+            'phone_number'=>$data['phone_number'],
+            'address'=>$data['address'],
         ]);
     }
 }

@@ -80,10 +80,12 @@
                         @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Login</a></li>
                             <li><a href="{{ url('/register') }}">Register</a></li>
+                            <li><a href="{{ route('bids.dashboard.index') }}">bids</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->name }}
+                                    <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -98,7 +100,9 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                     <li><a href="/Account">Account</a></li>
+                                     <li><a href="{{ route('account.dashboard.index')}}">Account</a></li>
+                                     <li><a href="/edit">edit</a></li>
+                                     <li><a href="/user1">member</a></li>
                                 </ul>
                             </li>
                            <li><a href="{{ url('/shoppingcart') }}">WishList</a></li>  
