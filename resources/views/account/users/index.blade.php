@@ -43,7 +43,7 @@
             </div>
             <div class="form-group">
                 <label>信用卡號：</label>
-                <label >{{Auth::user()->phone_number}}</label>
+                <label >{{Auth::user()->card_number}}</label>
             </div>            
             <div class="form-group">
                 <label>代幣數量：</label>

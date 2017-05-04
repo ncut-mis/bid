@@ -45,11 +45,11 @@
             </div>
              <div class="form-group">
                 <label>最小投注量：</label>
-                <input name="min_bids" class="form-control" placeholder="請輸入最小投注量" style="width:200px">
+                <input name="min_bids" class="form-control"  style="width:200px" value="{{round($products->price/10)}}" readonly="readonly">
             </div>
             <div class="form-group">
                 <label>最大投注量：</label>
-                <input name="max_bids" class="form-control" placeholder="請輸入最大投注量" style="width:200px">
+                <input name="max_bids" class="form-control"  style="width:200px" value="{{round($products->price/10+1500)}}" readonly="readonly">
             </div>
             <div class="form-group">
                 <label>數量：</label>

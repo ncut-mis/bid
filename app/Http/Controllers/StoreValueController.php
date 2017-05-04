@@ -37,8 +37,10 @@ class StoreValueController extends Controller
     }
     public function store(storevalueRequest $request,$id)
     {
-        StoreValue::create($request->all());
         $user_id=User::find($id);
+        $post1=StoreValue::create($request->all());
+        $post=StoreValue::where('id',$post1)->value('amount_of_money');
+        User::where('id',$id)->increment('tokens_quantity',$post/10);
         return redirect()->route('storevalue.index',$user_id);
     }
 }
