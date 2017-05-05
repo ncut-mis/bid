@@ -7,6 +7,6 @@ use DB;
 class HomeController extends Controller
 {
     public function Welcome(){
-        return view('welcome');
+        return view('Welcome');
     }
 }
