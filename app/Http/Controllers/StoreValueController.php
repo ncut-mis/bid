@@ -44,5 +44,8 @@ class StoreValueController extends Controller
         $user_quantity = User::where('id',$user_id->id)->value('tokens_quantity');
         $total = $store_quantity/10 + $user_quantity;
         User::where('id',$user_id->id)->update(['tokens_quantity' => $total]);
+        
+        
+        return redirect()->route('storevalue.index',$user_id);
     }
 }
