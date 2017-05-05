@@ -15,7 +15,7 @@ class CreateStorevalueTable extends Migration
     {
         Schema::create('storevalues', function (Blueprint $table) {
             $table->increments('id');
-            $table->int('user_id');
+            $table->integer('user_id');
             $table->timestampTz('datetime');
             $table->integer('amount_of_money');
             $table->string('payment_method');
