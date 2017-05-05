@@ -16,8 +16,7 @@ Route::auth();
 
 Route::get('/','HomeController@Welcome');
 
-Route::get('excel/export','ExcelController@export');
-Route::get('excel/import','ExcelController@import');
+
 
 Route::group(['prefix' => 'account'], function() {
     Route::get('/', ['as' => 'account.dashboard.index', 'uses' => 'AccountDashboardController@index']);
@@ -64,3 +63,12 @@ Route::group(['prefix' => 'admin'], function() {
     Route::patch('auctions/{id}', ['as' => 'admin.auctions.store'  , 'uses' => 'AdminauctionsController@store']);
     Route::delete('auctions/{id}'  , ['as' => 'admin.auctions.destroy', 'uses' => 'AdminauctionsController@destroy']);
 });
+
+
+Route::get('excel/export','ExcelController@export');
+Route::get('excel/import','ExcelController@import');
+Route::get('exportPDF','MaatwebsiteDemoController@exportPDF');
+
+Route::get('importExport', 'MaatwebsiteDemoController@importExport');
+Route::get('downloadExcel/{type}', 'MaatwebsiteDemoController@downloadExcel');
+Route::post('importExcel', 'MaatwebsiteDemoController@importExcel');
