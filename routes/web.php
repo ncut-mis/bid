@@ -15,13 +15,6 @@
 Route::auth();
 
 Route::get('/','HomeController@Welcome');
-Route::get('/home','HomeController@Home');
-Route::get('/shoppingcart','HomeController@Shoppingcart');
-Route::get('product/product','HomeController@Product');
-Route::get('product/3c','HomeController@C');
-Route::get('product/electric equipment','HomeController@Electricequipment');
-Route::get('notice/system','HomeController@System');
-Route::get('notice/activity','HomeController@Activity');
 
 
 Route::group(['prefix' => 'account'], function() {

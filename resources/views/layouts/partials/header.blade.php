@@ -78,7 +78,7 @@
                                         </form>
                                     </li>
                                      <li><a href="{{ route('account.dashboard.index')}}">會員中心</a></li>
-                                     <li><a href="{{ route('storevalue.dashboard.index')}}">儲值</a></li>                                     
+                                     <li><a href="{{ route('storevalue.dashboard.index')}}">儲值</a></li>
                                 </ul>
                             </li>
                            <li><a href="{{ url('/shoppingcart') }}">WishList</a></li>  

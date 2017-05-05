@@ -9,6 +9,7 @@ class StoreValue extends Model
     //
     protected $table = 'storevalues';
     protected $fillable = [
+        'id',
         'user_id',
         'datetime',
         'amount_of_money',

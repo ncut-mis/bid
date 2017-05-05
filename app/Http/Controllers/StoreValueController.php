@@ -38,7 +38,14 @@ class StoreValueController extends Controller
     public function store(storevalueRequest $request,$id)
     {
         StoreValue::create($request->all());
-        $user_id=User::find($id);
+        $user_id = User::find($id);
+        $sotre_id = StoreValue::max('id');
+        $store_quantity = StoreValue::where('id','=',$sotre_id)->value('amount_of_money');
+        $user_quantity = User::where('id',$user_id->id)->value('tokens_quantity');
+        $total = $store_quantity/10 + $user_quantity;
+        User::where('id',$user_id->id)->update(['tokens_quantity' => $total]);
+        
+        
         return redirect()->route('storevalue.index',$user_id);
     }
 }
