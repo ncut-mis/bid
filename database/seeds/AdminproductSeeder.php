@@ -17,7 +17,7 @@ class AdminproductSeeder extends Seeder
         'category'=> '3C用品',
         'specification'=> '機身顏色：黑',
         'catalog'=> 'Apple iPhone 7 Plus 128GB.jpg',
-        'quantity'=> '1',
+        'quantity'=> '10',
         'price'=> '29212',
         'cost'=> '10000',
         ]);

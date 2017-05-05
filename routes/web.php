@@ -16,6 +16,8 @@ Route::auth();
 
 Route::get('/','HomeController@Welcome');
 
+Route::get('excel/export','ExcelController@export');
+Route::get('excel/import','ExcelController@import');
 
 Route::group(['prefix' => 'account'], function() {
     Route::get('/', ['as' => 'account.dashboard.index', 'uses' => 'AccountDashboardController@index']);

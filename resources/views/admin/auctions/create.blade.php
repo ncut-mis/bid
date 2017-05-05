@@ -7,11 +7,11 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            新增商品 <small>請輸入商品內容</small>
+            新增拍賣品 <small>請輸入拍賣品內容</small>
         </h1>
         <ol class="breadcrumb">
             <li class="active">
-                <i class="fa fa-edit"></i> 商品管理
+                <i class="fa fa-edit"></i> 拍賣品管理
             </li>
         </ol>
     </div>
@@ -45,11 +45,11 @@
             </div>
              <div class="form-group">
                 <label>最小投注量：</label>
-                <input name="min_bids" class="form-control" placeholder="請輸入最小投注量" style="width:200px">
+                <input name="min_bids" class="form-control"  style="width:200px" value="{{round($products->price/10)}}" readonly="readonly">
             </div>
             <div class="form-group">
                 <label>最大投注量：</label>
-                <input name="max_bids" class="form-control" placeholder="請輸入最大投注量" style="width:200px">
+                <input name="max_bids" class="form-control"  style="width:200px" value="{{round($products->price/10+1500)}}" readonly="readonly">
             </div>
             <div class="form-group">
                 <label>數量：</label>
