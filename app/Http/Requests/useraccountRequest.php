@@ -30,6 +30,9 @@ class useraccountRequest extends FormRequest
             'birthday'=>'required',
             'phone_number'=>'required',
             'address'=>'required',
+            'card_number'=>'required',
+            'card_category'=>'required',
+            
         ];
     }
 }

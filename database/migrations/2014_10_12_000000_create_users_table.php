@@ -23,8 +23,8 @@ class CreateUsersTable extends Migration
             $table->string('address');
             $table->integer('tokens_quantity')->nullable();
             $table->string('phone_number');
-            $table->string('card_number')->nullable();
-            $table->string('card_category')->nullable();
+            $table->string('card_number')
+            $table->string('card_category')
             $table->rememberToken();
             $table->timestamps();
         });

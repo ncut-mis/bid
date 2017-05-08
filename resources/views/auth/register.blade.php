@@ -80,11 +80,25 @@
                                 <input id="phone_number" type="text" class="form-control" name="phone_number" value="{{ old('phone_number') }}" required>
                             </div>
                         </div>
-                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="address" class="col-md-4 control-label">Address</label>
 
                             <div class="col-md-6">
                                 <input id="address" type="text" class="form-control" name="address" value="{{ old('address') }}" required>
+                            </div>
+                        </div>
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label for="card_number" class="col-md-4 control-label">card_number</label>
+
+                            <div class="col-md-6">
+                                <input id="card_number" type="text" class="form-control" name="card_number" value="{{ old('card_number') }}" required>
+                            </div>
+                        </div>
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label for="card_category" class="col-md-4 control-label">card_category</label>
+
+                            <div class="col-md-6">
+                                <input id="card_category" type="text" class="form-control" name="card_category" value="{{ old('card_category') }}" required>
                             </div>
                         </div>
                         <div class="form-group">

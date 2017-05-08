@@ -25,7 +25,8 @@ class User extends Authenticatable
         'phone_number',
         'address',
         'tokens_quantity',
-        'credit card_number',
+        'card_number',
+        'card_category',
     ];
 
     /**

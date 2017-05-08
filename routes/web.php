@@ -16,14 +16,17 @@ Route::auth();
 
 Route::get('/','HomeController@Welcome');
 
-
-
 Route::group(['prefix' => 'account'], function() {
     Route::get('/', ['as' => 'account.dashboard.index', 'uses' => 'AccountDashboardController@index']);
     Route::get('users'          , ['as' => 'account.users.index' , 'uses' => 'AccountusersController@index']);
     Route::get('users/{id}/edit', ['as' => 'account.users.edit'   , 'uses' => 'AccountusersController@edit']);
     Route::patch('users/{id}'   , ['as' => 'account.users.update' , 'uses' => 'AccountusersController@update']);
 });
+
+Route::group(['prefix' => 'wishlist'] , function(){
+    Route::get('/' , ['as' => 'wishlist.dashboard.index' , 'uses' => 'WishlistDashboardController@index']);
+});
+
 
 Route::group(['prefix' => 'store'], function() {
     Route::get('/' , ['as' => 'storevalue.dashboard.index', 'uses' => 'StoreValueDashboardController@index']);

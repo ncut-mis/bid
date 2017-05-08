@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,9 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'lp4829631@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', '小確幸
+            '),
     ],
 
     /*
@@ -98,13 +99,14 @@ return [
     | of the emails. Or, you may simply stick with the Laravel defaults!
     |
     */
-
-    'markdown' => [
+    'sendmail' => '/usr/sbin/sendmail -bs',
+    'pretend' => false,
+    /*'markdown' => [
         'theme' => 'default',
 
         'paths' => [
             resource_path('views/vendor/mail'),
         ],
-    ],
+    ],*/
 
 ];

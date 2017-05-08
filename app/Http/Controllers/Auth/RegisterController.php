@@ -65,6 +65,7 @@ class RegisterController extends Controller
             'birthday'=>'required',
             'phone_number'=>'required',
             'address'=>'required',
+            'card_number'=>'required|min:16|max:16|',
         ]);
     }
 
@@ -84,6 +85,8 @@ class RegisterController extends Controller
             'birthday'=>$data['birthday'],
             'phone_number'=>$data['phone_number'],
             'address'=>$data['address'],
+            'card_number'=>$data['card_number'],
+            'card_category'=>$data['card_category'],
         ]);
     }
 }
