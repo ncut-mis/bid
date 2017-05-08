@@ -26,9 +26,9 @@
             {{ csrf_field() }}
             {{ method_field('PATCH') }}
 
-    <div class="form-group">
+            <div class="form-group">
                 <label>商品名稱：</label>
-                <input name="name" class="form-control" value="{{ $products->name }}">
+                <input name="name" class="form-control" value="{{ $products->name }}" unique>
             </div>
              <div class="form-group">
                 <label>商品類別：</label>
@@ -41,6 +41,10 @@
             <div class="form-group">
                 <label>商品型錄：</label>
                 <input type="file" class="form-control" name="catalog" value="{{ $products->catalog }}">
+            </div>
+            <div class="form-group">
+                <label>商品圖片：</label>
+                <input type="file" class="form-control" name="image" value="{{ $products->image }}">
             </div>
              <div class="form-group">
                 <label>商品數量：</label>

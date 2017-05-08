@@ -15,13 +15,16 @@ class CreateAuctionsTable extends Migration
     {
         Schema::create('auctions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('product_id');
-            $table->dateTime('start date');
-            $table->dateTime('end date');
-            $table->string('betting stytle');
-            $table->integer('maximum');
-            $table->integer('minimum');
+            $table->integer('product_id');
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
+            $table->string('bid_type');
+            $table->integer('max_bids');
+            $table->integer('min_bids');
             $table->integer('quantity');
+            $table->string('bid_function');
+            $table->string('situation');
+            $table->integer('winning_numbers');
             $table->rememberToken();
             $table->timestamps();
         });

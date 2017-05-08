@@ -14,8 +14,12 @@ class product extends Model
         'category',
         'specification',
         'catalog',
+        'image',
         'quantity',
         'price',
         'cost',
     ];
+     public function auctions(){
+        return $this->hasMany(Auction::class);
+    }
 }

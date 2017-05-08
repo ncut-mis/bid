@@ -41,6 +41,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('products'          , ['as' => 'admin.products.index' , 'uses' => 'AdminproductsController@index']);
     Route::get('products/create'   , ['as' => 'admin.products.create' , 'uses' => 'AdminproductsController@create']);
     Route::get('products/{id}/edit', ['as' => 'admin.products.edit'   , 'uses' => 'AdminproductsController@edit']);
+    Route::get('products/{id}/detail'   , ['as' => 'admin.products.detail'   , 'uses' => 'AdminproductsController@detail']);
     Route::patch('products/{id}'   , ['as' => 'admin.products.update' , 'uses' => 'AdminproductsController@update']);
     Route::post('products'         , ['as' => 'admin.products.store'  , 'uses' => 'AdminproductsController@store']);
     Route::delete('products/{id}'  , ['as' => 'admin.products.destroy', 'uses' => 'AdminproductsController@destroy']);

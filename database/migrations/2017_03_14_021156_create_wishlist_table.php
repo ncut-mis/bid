@@ -13,10 +13,10 @@ class CreateWishlistTable extends Migration
      */
     public function up()
     {
-        Schema::create('wishlist', function (Blueprint $table) {
+        Schema::create('wishauction', function (Blueprint $table) {
            $table->increments('id');
             $table->integer('user_id');
-            $table->integer('aucyion_id');
+            $table->integer('auction_id');
             $table->date('date');
             $table->integer('quantity');
             $table->timestamps();
@@ -31,6 +31,6 @@ class CreateWishlistTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('wishlist');
+        Schema::dropIfExists('wishauction');
     }
 }
