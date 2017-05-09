@@ -27,7 +27,7 @@
 
             <div class="form-group">
                 <label>商品名稱：</label>
-                <input name="name" class="form-control"  style="width:500px" placeholder="請輸入商品名稱" unique>
+                <input name="name" class="form-control"  style="width:500px" placeholder="請輸入商品名稱" >
             </div>
             <div class="form-group">
                 <label>商品類別：</label>
