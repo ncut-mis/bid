@@ -51,6 +51,8 @@ Route::group(['prefix' => 'admin'], function() {
     Route::patch('categories/{id}'   , ['as' => 'admin.categories.update' , 'uses' => 'AdminCategoryController@update']);
     Route::post('categories'         , ['as' => 'admin.categories.store'  , 'uses' => 'AdminCategoryController@store']);
     Route::delete('categories/{id}'  , ['as' => 'admin.categories.destroy', 'uses' => 'AdminCategoryController@destroy']);
+    Route::get('report',['as' => 'admin.report.index', 'uses' => 'AdminReportController@index']);
+    Route::get('report/create',['as' => 'admin.report.create', 'uses' => 'AdminReportController@create']);
 
 
     Route::post('/user/icon-upload','AdminproductsController@iconUpload');
@@ -65,11 +67,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::delete('auctions/{id}'  , ['as' => 'admin.auctions.destroy', 'uses' => 'AdminauctionsController@destroy']);
 });
 
-
-Route::get('excel/export','ExcelController@export');
-Route::get('excel/import','ExcelController@import');
-Route::get('exportPDF','MaatwebsiteDemoController@exportPDF');
-
 Route::get('importExport', 'MaatwebsiteDemoController@importExport');
 Route::get('downloadExcel/{type}', 'MaatwebsiteDemoController@downloadExcel');
 Route::post('importExcel', 'MaatwebsiteDemoController@importExcel');
+
