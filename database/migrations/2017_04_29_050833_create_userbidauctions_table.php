@@ -15,9 +15,10 @@ class CreateUserbidauctionsTable extends Migration
     {
          Schema::create('userbidauctions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('user_id');
-            $table->string('auction_id');
-            $table->string('bid_quantity');
+            $table->integer('user_id');
+            $table->integer('auction_id');
+            $table->integer('bid_quantity');
+            $table->string('status');
          });
     }
 

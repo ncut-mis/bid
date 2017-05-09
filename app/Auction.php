@@ -18,4 +18,7 @@ class Auction extends Model
         'max_bids',
         'quantity',
     ];
+    public function products(){
+        return $this->belongsTo(product::class);
+    }
 }
