@@ -45,6 +45,8 @@
                 
                 <a href="{{ route('admin.auctions.index') }}"><i class="fa fa-fw fa-edit"></i> 拍賣品管理</a>
 
+                <a href="{{ route('admin.report.index') }}"><i class="fa fa-fw fa-edit"></i> 報表資訊</a>
+
             </li>
         </ul>
     </div>
