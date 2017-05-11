@@ -11,8 +11,20 @@
     <title>{{ config('app.name', 'Lucky Life') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
+    <!--<link href="/css/app.css" rel="stylesheet">-->
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
+    <!-- Custom CSS -->
+    <link href="{{ asset('css/shop-homepage.css') }}" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="{{ asset('css/plugins/morris.css') }}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+
+    <!--<link href="css/shop-homepage.css" rel="stylesheet">-->
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -21,6 +33,7 @@
     </script>
 </head>
 <body>
+
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -61,6 +74,9 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                <!-- 我在這裡的話 我會做 while 迴圈 連結資料庫的每一列
+                                <li><a href="/product/product"> "這裡是顯示資料"   </a></li>
+                                -->
                                     <li><a href="/product/product">全部商品</a></li>
                                     <li><a href="/product/3c">3C/手機/電腦周邊</a></li>
                                     <li><a href="/product/electric equipment">家用電器</a></li>
@@ -80,7 +96,6 @@
                         @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Login</a></li>
                             <li><a href="{{ url('/register') }}">Register</a></li>
-                            <li><a href="{{ route('bids.dashboard.index') }}">bids</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -100,9 +115,8 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                     <li><a href="{{ route('account.dashboard.index')}}">Account</a></li>
-                                     <li><a href="/edit">edit</a></li>
-                                     <li><a href="/user1">member</a></li>
+                                     <li><a href="{{ route('account.dashboard.index')}}">會員基本資料</a></li>
+                                     <li><a href="{{ route('storevalue.dashboard.index')}}">儲值</a></li>
                                 </ul>
                             </li>
                            <li><a href="{{ url('/shoppingcart') }}">WishList</a></li>  

@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests\productRequest;
 use App\Http\Requests\CategoryRequest;
 use App\Http\Requests\auctionRequest;
-use App\Product;
+use App\product;
 use App\category;
-use App\Auction;
+use App\Auctions;
 
 class AdminproductsController extends Controller
 {
@@ -32,13 +32,6 @@ class AdminproductsController extends Controller
         $data = ['products' => $post];
 
         return view('admin.products.edit', $data);
-    }
-    public function detail($id)
-    {
-        $product_id=Product::find($id);
-        $auction_data=Auction::where('product_id',$id)->get();
-        $data = ['products' => $product_id,'auctions'=>$auction_data];
-        return view('admin.products.detail', $data);
     }
     public function update(productRequest $request, $id)
     {

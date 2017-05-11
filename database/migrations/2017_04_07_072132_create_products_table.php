@@ -19,7 +19,6 @@ class CreateProductsTable extends Migration
             $table->string('category');
             $table->string('specification');
             $table->string('catalog');
-            $table->string('image');
             $table->integer('quantity');
             $table->integer('price');
             $table->integer('cost');

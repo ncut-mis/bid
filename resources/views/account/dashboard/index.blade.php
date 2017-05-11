@@ -1,6 +1,6 @@
 @extends('account.layouts.master')
 
-@section('title', '個人帳戶')
+@section('title', '會員中心')
 
 @section('content')
 <!-- Page Heading -->

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use DB;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -11,11 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-    	$this->call(auctions::class);
-        $this->call(users::class);
-        $this->call(serialnumberSeeder::class);
-        $this->call(userbidauctionsSeeder::class);
+       $this‐>call(AdminproductSeeder::class);
+       $this‐>call(UserSeeder::class);
+       $this‐>call(storeSeeder::class);
     }
 }
-
-

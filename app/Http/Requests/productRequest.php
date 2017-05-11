@@ -27,8 +27,6 @@ class productRequest extends FormRequest
             'name'=>'required',
             'category'=>'required',
             'specification'=>'required',
-            'catalog'=>'required',
-            'image'=>'required',
             'quantity'=>'required',
             'price'=>'required',
             'cost'=>'required',

@@ -21,7 +21,7 @@
                     <tr>
                         <th width="70" style="text-align: center">儲值日期</th>
                         <th width="70" style="text-align: center">儲值金額</th>
-                        <th width="70" style="text-align: center">信用卡號</th>
+                        <th width="70" style="text-align: center">銀行名稱/代碼</th>
                         <th width="70" style="text-align: center">儲值方式</th>
                     </tr>
                 </thead>
