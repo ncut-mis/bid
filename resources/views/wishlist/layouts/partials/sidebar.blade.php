@@ -28,7 +28,9 @@
                                     {{ Auth::user()->name }}
                 </a>
             </li>
-            
+            <li>
+                <a href="{{ route('wishlist.index', Auth::user()->id) }}"><i class="fa fa-fw fa-create"></i>願望清單</a>
+            </li>
         </ul>
     </div>
     <!-- /.navbar-collapse -->

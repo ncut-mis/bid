@@ -25,6 +25,7 @@ Route::group(['prefix' => 'account'], function() {
 
 Route::group(['prefix' => 'wishlist'] , function(){
     Route::get('/' , ['as' => 'wishlist.dashboard.index' , 'uses' => 'WishlistDashboardController@index']);
+    Route::get('wishlist/{id}' , ['as' => 'wishlist.index'    ,'uses' => 'WishlistController@index']);
 });
 
 

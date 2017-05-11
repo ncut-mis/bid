@@ -19,11 +19,10 @@
                 <tbody>
                 @foreach($wishlist as $post)
                     <tr>
-                        <td style="vertical-align:middle">{{ $post->auction_id   }}</td>
-                        <td style="vertical-align:middle">{{ $post->user_id }}</td>
                         <td style="vertical-align:middle">{{ $post->auction_id }}</td>
                         <td style="vertical-align:middle">{{ $post->date }}</td>
                         <td style="vertical-align:middle">{{ $post->quantity }}</td>
+                        <td style="vertical-align:middle">{{ $post->auction_id }}</td>
                         <td style="vertical-align:middle">
                             <div>
                                 

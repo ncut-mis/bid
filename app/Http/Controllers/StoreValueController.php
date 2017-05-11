@@ -7,7 +7,7 @@ use App\User;
 use Mail;
 use Illuminate\Http\Request;
 use App\Http\Requests\storevalueRequest;
-use App\Http\Requests\cardnumberRequest;
+
 
 
 class StoreValueController extends Controller
