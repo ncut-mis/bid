@@ -21,17 +21,31 @@
             {{ csrf_field() }}
 
             <div class="form-group">
-                <input type="hidden" name="user_id" class="form-control" value="{{$users->id}}" readonly="readonly">
+                <input type="hidden" name="user_id" class="form-control" value="{{$users->id}}">
             </div>
             <div class="form-group">
-                <label>銀行名稱/代碼：</label>
-                <input name="bank_name_code" class="form-control">
+                <label>銀行名稱：</label>
+                <input type="text" name="bank_name_code">
+            </div>
+            <div class="form-group">
+                <label>信用卡卡號：</label>
+                <select name="card_number" name="card_number">
+                    <option value="{{$users->card_number}}">{{$users->card_number}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>有效期限：</label>
+                <input type="month">
+            </div>
+            <div class="form-group">
+                <label>卡片背面後三碼：</label>
+                <input  maxlength="3">
             </div>
             <div class="form-group">
                 <label>儲值金額：</label><br>
-                <input type="radio" name="amount_of_money" value="10">10<br>
-                <input type="radio" name="amount_of_money" value="100">100<br>
                 <input type="radio" name="amount_of_money" value="150">150<br>
+                <input type="radio" name="amount_of_money" value="200">200<br>
+                <input type="radio" name="amount_of_money" value="1000">1000<br>
             </div>
             <div class="form-group">
                 <label>付款方式：</label><br>

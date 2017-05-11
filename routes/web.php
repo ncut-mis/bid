@@ -15,14 +15,34 @@
 Route::auth();
 
 Route::get('/','HomeController@Welcome');
+Route::get('/home','HomeController@Home');
+Route::get('/shoppingcart','HomeController@Shoppingcart');
+Route::get('/edit', 'HomeController@type');
+/*Route::get('product/{type}', function ($type) {
+    return view('product.product');
+});
+*/
+Route::get('product/product','HomeController@Product');
 
+Route::get('product/{id}', ['as' => 'product.index' , 'uses' => 'Productcontroller@index']);
 
+Route::get('product/3c','HomeController@C');
+Route::get('product/electric equipment','HomeController@Electricequipment');
+Route::get('notice/system','HomeController@System');
+Route::get('notice/activity','HomeController@Activity');
 
 Route::group(['prefix' => 'account'], function() {
     Route::get('/', ['as' => 'account.dashboard.index', 'uses' => 'AccountDashboardController@index']);
+
     Route::get('users'          , ['as' => 'account.users.index' , 'uses' => 'AccountusersController@index']);
     Route::get('users/{id}/edit', ['as' => 'account.users.edit'   , 'uses' => 'AccountusersController@edit']);
     Route::patch('users/{id}'   , ['as' => 'account.users.update' , 'uses' => 'AccountusersController@update']);
+    Route::delete('users/{id}'  , ['as' => 'account.users.destroy', 'uses' => 'AccountusersController@destroy']);
+});
+
+
+Route::group(['prefix' => 'bids'], function() {
+    Route::get('/', ['as' => 'bids.dashboard.index', 'uses' => 'BidsController@index']);
 });
 
 Route::group(['prefix' => 'store'], function() {
