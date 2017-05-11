@@ -9,9 +9,16 @@
             <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
+                        {{ config('app.name') }}
+                    </a>      
     </div>
+     <ul class="nav navbar-right top-nav">    
+      <li>          
+        <a href="{{ url('/logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
+        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}
+        </form>
+      </li>  
+    </ul>      
     <!-- Top Menu Items -->
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -23,12 +30,9 @@
             </li>
             <li>
                 <a href="{{ route('account.users.index') }}"><i class="fa fa-fw fa-edit"></i>會員資料</a>
-            </li>
+            
         <li>
-        <a href="{{ url('/logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout
-        </a>
-        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}
-        </form>
+        
         </li>
         </ul>
     </div>

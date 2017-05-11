@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUser1sTable extends Migration
+class CreateUserbidauctionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateUser1sTable extends Migration
      */
     public function up()
     {
-        Schema::create('user1s', function (Blueprint $table) {
+         Schema::create('userbidauctions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('email');
-            $table->string('password');
-            $table->timestamps();
-        });
+            $table->string('user_id');
+            $table->string('auction_id');
+            $table->string('bid_quantity');
+         });
     }
 
     /**
@@ -29,6 +28,6 @@ class CreateUser1sTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user1s');
+         Schema::dropIfExists('userbidauctions');
     }
 }

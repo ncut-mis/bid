@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAuctionsTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,9 @@ class CreateAuctionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('auctions', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('product_id');
-            $table->dateTime('start date');
-            $table->dateTime('end date');
-            $table->string('betting stytle');
-            $table->integer('maximum');
-            $table->integer('minimum');
-            $table->integer('quantity');
+            $table->string('name');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -34,6 +28,6 @@ class CreateAuctionsTable extends Migration
      */
     public function down()
     {
-       Schema::dropIfExists('auctions');
+       Schema::dropIfExists('categories');
     }
 }

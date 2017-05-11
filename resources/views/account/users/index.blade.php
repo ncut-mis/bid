@@ -1,6 +1,6 @@
 @extends('account.layouts.master')
 
-@section('title', '文章管理')
+@section('title', '會員中心')
 
 @section('content')
 <!-- Page Heading -->
@@ -13,34 +13,43 @@
 </div>
 <div class="row">
     <div class="col-lg-12">
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover" style="text-align: center">
-                <thead>
-                    <tr>
-                        <th width="30" style="text-align: center">姓名</th>
-                        <th width="30" style="text-align: center">信箱</th>
-                        <th width="100" style="text-align: center">性別</th>
-                        <th width="100" style="text-align: center">生日</th>
-                        <th width="100" style="text-align: center">連絡電話</th>
-                        <th width="100" style="text-align: center">地址</th>
-                        <th width="100" style="text-align: center">功能</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="vertical-align:middle"> {{ Auth::user()->name }}</td>
-                        <td style="vertical-align:middle">{{ Auth::user()->email }}</td>
-                        <td style="vertical-align:middle">{{ Auth::user()->gender }}</td>
-                        <td style="vertical-align:middle">{{ Auth::user()->birthday }}</td>
-                        <td style="vertical-align:middle">{{ Auth::user()->phone_number }}</td>
-                        <td style="vertical-align:middle">{{ Auth::user()->address }}</td>
-                        <td style="vertical-align:middle">
-                                    <a href="{{ route('account.users.edit', Auth::user()->id) }}" class="btn btn-success">更改</a>  
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <div class="form-group">
+                <label>姓名：</label>
+               <label >{{Auth::user()->name}}</label>
+            </div>
+            <div class="form-group">
+                <label>信箱：</label>
+                <label >{{Auth::user()->email}}</label>
+            </div>
+            <div class="form-group">
+                <label>性別：</label>
+                <label >{{Auth::user()->gender}}</label>
+            </div>
+            <div class="form-group">
+                <label>生日：</label>
+                <label >{{Auth::user()->birthday}}</label>
+            </div>
+            <div class="form-group">
+                <label>連絡電話：</label>
+                <label >{{Auth::user()->phone_number}}</label>
+            </div>
+            <div class="form-group">
+                <label>地址：</label>
+                <label >{{Auth::user()->address}}</label>
+            </div>
+            <div class="form-group">
+                <label>信用卡類別：</label>
+                <label >{{Auth::user()->card_category}}</label>
+            </div>
+            <div class="form-group">
+                <label>信用卡號：</label>
+                <label >{{Auth::user()->card_number}}</label>
+            </div>            
+            <div class="form-group">
+                <label>代幣數量：</label>
+                <label >{{Auth::user()->tokens_quantity}}</label>
+            </div>
+        <a href="{{ route('account.users.edit', Auth::user()->id) }}" class="btn btn-success">更改</a>  
     </div>
 </div>
 <!-- /.row -->

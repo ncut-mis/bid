@@ -1,6 +1,6 @@
 @extends('account.layouts.master')
 
-@section('title', '編輯文章')
+@section('title', '會員資料修改')
 
 @section('content')
 <!-- Page Heading -->
@@ -30,6 +30,10 @@
                 <input name="email" class="form-control" style="width:200px" value="{{Auth::user()->email}}">
             </div>
             <div class="form-group">
+                <label>密碼：</label>
+                <input type="password" name="password" class="form-control" style="width:200px" value="{{Auth::user()->password}}">
+            </div>
+            <div class="form-group">
                 <label>性別：</label>
                 <input name="gender" class="form-control" style="width:200px" value="{{Auth::user()->gender}}">
             </div>
@@ -44,6 +48,18 @@
             <div class="form-group">
                 <label>地址：</label>
                 <input name="address" class="form-control" style="width:200px" value="{{Auth::user()->address}}">
+            </div>
+            <div class="form-group">
+                <label>信用卡號：</label>
+                <input name="card_number" class="form-control" style="width:200px" value="{{Auth::user()->card_number}}">
+            </div>
+            <div class="form-group">
+                <label>信用卡類別：</label>
+                <input name="card_category" class="form-control" style="width:200px" value="{{Auth::user()->card_category}}">
+            </div>
+            <div class="form-group">
+                <label>代幣數量：</label>
+                <label>{{Auth::user()->tokens_quantity}}</label>
             </div>
             <div class="text-left">
                 <button type="submit" class="btn btn-success" >更新</button>   

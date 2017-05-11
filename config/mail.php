@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'test20170609@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', '小確幸'),
+        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
     /*
@@ -99,13 +99,12 @@ return [
     |
     */
 
-    /*'markdown' => [
+    'markdown' => [
         'theme' => 'default',
 
         'paths' => [
             resource_path('views/vendor/mail'),
         ],
-    ],*/
-    'sendmail' => '/usr/sbin/sendmail -bs',
-    'pretend' => false,
+    ],
+
 ];

@@ -35,7 +35,7 @@
                         <th width="70" style="text-align: center">商品名稱</th>
                         <th width="70" style="text-align: center">商品類別</th>
                         <th width="70" style="text-align: center">商品規格</th>
-                        <th width="70" style="text-align: center">商品圖片</th>
+                        <th width="70" style="text-align: center">商品型錄</th>
                         <th width="70" style="text-align: center">數量</th>
                         <th width="70" style="text-align: center">價格</th>
                         <th width="70" style="text-align: center">成本</th>
@@ -46,14 +46,10 @@
                 @foreach($products as $post)
                     <tr>
                         <td style="vertical-align:middle">P{{ $post->id }}</td>
-                        <td style="vertical-align:middle" >
-                        <a href="{{ route('admin.products.detail', $post->id) }}"style="font-family:DFKai-sb;">
-                        {{ $post->name }}
-                        </a>
-                        </td>
+                        <td style="vertical-align:middle">{{ $post->name }}</td>
                         <td style="vertical-align:middle">{{ $post->category }}</td>
                         <td style="vertical-align:middle">{{ $post->specification }}</td>
-                        <td style="vertical-align:middle"><img src="/img/{{ $post->image }}" width="100px" height="100px"></td>
+                        <td style="vertical-align:middle"><img src="/img/{{ $post->catalog }}" width="100px" height="100px"></td>
                         
 
                         <td style="vertical-align:middle">{{ $post->quantity}}</td>

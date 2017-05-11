@@ -27,12 +27,12 @@
 
             <div class="form-group">
                 <label>商品名稱：</label>
-                <input name="name" class="form-control"  style="width:500px" placeholder="請輸入商品名稱" >
+                <input name="name" class="form-control" placeholder="請輸入商品名稱">
             </div>
             <div class="form-group">
                 <label>商品類別：</label>
                 
-                      <select  class="form-control" name="category" style="width:500px">
+                      <select  class="form-control" name="category">
                        @foreach($categories as $post)
 　                    <option value="{{ $post->name }}">{{ $post->name }}</option>
                        @endforeach
@@ -41,27 +41,23 @@
             </div>
              <div class="form-group">
                 <label>商品規格：</label>
-                <textarea name="specification" class="form-control" style="width:500px" rows="10"></textarea>
+                <textarea name="specification" class="form-control" rows="10"></textarea>
             </div>
              <div class="form-group">
                 <label>商品型錄：</label> 
-             <input type="file" class="form-control" name="catalog" style="width:500px" placeholder="上傳圖片">
-            </div>
-             <div class="form-group">
-                <label>商品圖片：</label> 
-             <input type="file" class="form-control" name="image" style="width:500px" placeholder="上傳圖片">
+             <input type="file" class="form-control" name="catalog" placeholder="上傳圖片">
             </div>
              <div class="form-group">
                 <label>商品數量：</label>
-                <input name="quantity" class="form-control" style="width:500px" placeholder="請輸入商品數量">
+                <input name="quantity" class="form-control" placeholder="請輸入商品數量">
             </div>
              <div class="form-group">
                 <label>價格：</label>
-                <input name="price" class="form-control" style="width:500px" placeholder="請輸入價格">
+                <input name="price" class="form-control" placeholder="請輸入價格">
             </div>
             <div class="form-group">
                 <label>成本：</label>
-                <input name="cost" class="form-control" style="width:500px" placeholder="請輸入成本">
+                <input name="cost" class="form-control" placeholder="請輸入成本">
             </div>
             <div class="text-right">
                 <button type="submit" class="btn btn-success">新增</button>

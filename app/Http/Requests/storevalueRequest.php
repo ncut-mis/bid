@@ -26,7 +26,7 @@ class storevalueRequest extends FormRequest
         return [
             'bank_name_code'=>'required',
             'amount_of_money'=>'required',
-            'payment_method'=>'required',    
+            'payment_method'=>'required',            
         ];
     }
 }
