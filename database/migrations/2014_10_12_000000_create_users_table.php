@@ -21,10 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('gender');
             $table->date('birthday');
             $table->string('address');
-            $table->integer('tokens_quantity')->nullable();
             $table->string('phone_number');
-            $table->string('card_number')
-            $table->string('card_category')
+            $table->integer('tokens_quantity');
+            $table->string('card_number'); 
+            $table->string('card_category');
             $table->rememberToken();
             $table->timestamps();
         });
