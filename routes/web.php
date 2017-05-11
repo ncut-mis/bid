@@ -40,14 +40,6 @@ Route::group(['prefix' => 'account'], function() {
     Route::delete('users/{id}'  , ['as' => 'account.users.destroy', 'uses' => 'AccountusersController@destroy']);
 });
 
-/*   範例*/
-//Route::resource('task','TaskController');
-Route::resource('tasks','TaskController');
-/*Route::get('/task', 'TaskController@index');
-Route::post('/task', 'TaskController@store');
-Route::delete('/task/{task}', 'TaskController@destroy');
-//Route::get('/tracy' ,function (){throw new \Exception('Tracy works!');});*/
-
 Route::group(['prefix' => 'bids'], function() {
-    Route::get('/', ['as' => 'bids.dashboard.index', 'uses' => 'bidsController@index']);
+    Route::get('/', ['as' => 'bids.dashboard.index', 'uses' => 'BidsController@index']);
 });
