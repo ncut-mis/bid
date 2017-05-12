@@ -51,7 +51,8 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('categories'         , ['as' => 'admin.categories.store'  , 'uses' => 'AdminCategoryController@store']);
     Route::delete('categories/{id}'  , ['as' => 'admin.categories.destroy', 'uses' => 'AdminCategoryController@destroy']);
     Route::get('report',['as' => 'admin.report.index', 'uses' => 'AdminReportController@index']);
-    Route::get('report/create',['as' => 'admin.report.create', 'uses' => 'AdminReportController@create']);
+    Route::post('report/create',['as' => 'admin.report.report', 'uses' => 'AdminReportController@create']);
+
 
 
     Route::post('/user/icon-upload','AdminproductsController@iconUpload');
@@ -64,6 +65,9 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('auctions/{id}', ['as' => 'admin.auctions.store'  , 'uses' => 'AdminauctionsController@store']);
     Route::patch('auctions/{id}', ['as' => 'admin.auctions.store'  , 'uses' => 'AdminauctionsController@store']);
     Route::delete('auctions/{id}'  , ['as' => 'admin.auctions.destroy', 'uses' => 'AdminauctionsController@destroy']);
+
+
+
 });
 
 Route::get('importExport', 'MaatwebsiteDemoController@importExport');
