@@ -1,8 +1,9 @@
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
+<div class="container">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -10,12 +11,10 @@
         </button>
 
                     <!-- Branding Image -->
-                      <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
+                      <a class="navbar-brand" href="#">Lucky Life</a>
                 </div>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-left">            
                             <li class="dropdown">
@@ -36,20 +35,12 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                <!-- 我在這裡的話 我會做 while 迴圈 連結資料庫的每一列
-                                <li><a href="/product/product"> "這裡是顯示資料"   </a></li>
-                                -->
                                     <li><a href="/product/product">全部商品</a></li>
                                     <li><a href="/product/3c">3C/手機/電腦周邊</a></li>
                                     <li><a href="/product/electric equipment">家用電器</a></li>
                                 </ul>
                             </li>
-        <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">提交</button>
-        </form>
+        
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -91,7 +82,7 @@
 
         @yield('content')
     </div>
-
+</div>
     <!-- Scripts -->
     <script src="/js/app.js"></script>
 </body>
